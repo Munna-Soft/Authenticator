@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticator Code Generator | Munna MasterMind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-lock"></i> <span data-i18n="title">Authenticator Code Generator</span></h1>
+            <p class="subtitle" data-i18n="subtitle">TOTP-ভিত্তিক নিরাপদ দ্বি-পদক্ষেপ যাচাইকরণ কোড তৈরি করুন</p>
+            
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="BD">বাংলা (Bangla)</option>
+                    <option value="US">English (US)</option>
+                    <option value="IN">हिंदी (Hindi)</option>
+                    <option value="SA">العربية (Arabic)</option>
+                    <option value="FR">Français (French)</option>
+                    <option value="DE">Deutsch (German)</option>
+                    <option value="ES">Español (Spanish)</option>
+                    <option value="PT">Português (Portuguese)</option>
+                    <option value="CN">中文 (Chinese)</option>
+                    <option value="JP">日本語 (Japanese)</option>
+                    <option value="KR">한국어 (Korean)</option>
+                    <option value="RU">Русский (Russian)</option>
+                </select>
+                <button id="applyLanguage" class="btn-small">
+                    <i class="fas fa-check"></i> <span data-i18n="apply_language">ভাষা প্রয়োগ করুন</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="setup-section">
+                <h2><i class="fas fa-key"></i><span data-i18n="setup_key">আপনার সেটআপ কী দিন</span></h2>
+                <div class="input-group">
+                    <input type="text" id="secretKey" data-i18n-placeholder="secret_key_placeholder" placeholder="আপনার সিক্রেট কী এখানে লিখুন বা পেষ্ট করুন (Base16/32 ফরম্যাট)">
+                    <button id="clearKey" class="btn-clear">
+                        <i class="fas fa-times"></i> <span data-i18n="clear">ক্লিয়ার</span>
+                    </button>
+                </div>
+                <div class="key-info">
+                    <p><i class="fas fa-info-circle"></i> <span data-i18n="key_tip">টিপ: গুগল অথেন্টিকেটর, মাইক্রোসফট অথেন্টিকেটর এর সাথে সামঞ্জস্যপূর্ণ</span></p>
+                </div>
+            </div>
+
+            <div class="code-display-section">
+                <div class="code-header">
+                    <h2><i class="fas fa-code"></i> <span data-i18n="current_otp">বর্তমান ওটিপি কোড</span></h2>
+                    <div class="code-actions">
+                        <button id="copyCode" class="btn-small">
+                            <i class="far fa-copy"></i> <span data-i18n="copy_code">কোড কপি করুন</span>
+                        </button>
+                        <button id="saveCode" class="btn-small">
+                            <i class="fas fa-save"></i> <span data-i18n="save_key_code">কী+কোড সংরক্ষণ করুন</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="code-display" id="currentCode">
+                    <span class="code-placeholder">
+                        <i class="fas fa-key"></i> <span data-i18n="enter_key_for_code">কোড দেখতে সিক্রেট কী দিন</span>
+                    </span>
+                </div>
+                
+                <div class="timer" id="timerSection">
+                    <div class="timer-bar">
+                        <div class="timer-progress" id="timerProgress"></div>
+                    </div>
+                    <div class="time-left" id="timeLeft">--s</div>
+                </div>
+                
+                <div class="generate-btn-container">
+                    <button id="generateCode" class="btn-primary btn-large">
+                        <i class="fas fa-bolt"></i> <span data-i18n="generate_code">কোড জেনারেট করুন</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3><i class="fas fa-question-circle"></i> <span data-i18n="how_to_use">কিভাবে ব্যবহার করবেন?</span></h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p data-i18n="step1">আপনার অ্যাকাউন্টের সিক্রেট কী (Base16/32 ফরম্যাট) ইনপুট বক্সে লিখুন। গুগল, মাইক্রোসফট, ফেসবুক ইত্যাদির ২-ফ্যাক্টর অথেন্টিকেশন কী কাজ করবে।</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p data-i18n="step2">"কোড জেনারেট করুন" বাটনে ক্লিক করুন বা স্বয়ংক্রিয়ভাবে কোড তৈরি দেখুন।</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p data-i18n="step3">৬-অঙ্কের কোডটি ৩০ সেকেন্ডের জন্য বৈধ থাকবে। "কোড কপি করুন" বাটনে ক্লিক করে ব্যবহার করুন।</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <p data-i18n="step4">"কী+কোড সংরক্ষণ করুন" বাটনে ক্লিক করে আপনার কী এবং কোড একটি টেক্সট ফাইল হিসেবে ডাউনলোড করুন।</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-section">
+                <h3><i class="fas fa-key"></i> <span data-i18n="example_keys">উদাহরণ কী (পরীক্ষার জন্য)</span></h3>
+                <div class="example-keys">
+                    <div class="example-key" data-key="JBSWY3DPEHPK3PXP">
+                        <span class="key-name">Google 16:</span>
+                        <code>JBSWY3DPEHPK3PXP</code>
+                        <button class="btn-small use-key-btn"><i class="fas fa-check"></i> <span data-i18n="use_key">ব্যবহার করুন</span></button>
+                    </div>
+                    <div class="example-key" data-key="MFRGGZDFMZTWQ2LKN5SWKIDNMF2GK3DP">
+                        <span class="key-name">Google 32:</span>
+                        <code>MFRGGZDFMZTWQ2LKN5SWKIDNMF2GK3DP</code>
+                        <button class="btn-small use-key-btn"><i class="fas fa-check"></i> <span data-i18n="use_key">ব্যবহার করুন</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p data-i18n="security_notice">এটি একটি নিরাপদ TOTP কোড জেনারেটর। আপনার সিক্রেট কী ব্রাউজার মেমোরিতে সংরক্ষিত হয় কিন্তু সার্ভারে পাঠানো হয় না।</p>
+            <p>© 2026 Authenticator Code Generator | <span data-i18n="published_by">Published by</span> Munna MasterMind</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
