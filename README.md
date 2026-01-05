@@ -1,6 +1,10 @@
 <!-- GitAds-Verify: OUYIZPMHRYZ6P3KV4SV9ID4Y3YDRWR5R -->
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=munna-soft/authenticator@github)](https://gitads.dev/v1/ad-track?source=munna-soft/authenticator@github)
 
 # 🔐 Authenticator Code Generator
+
+<div align="center">
 
 ![Authenticator](https://img.shields.io/badge/Authenticator-TOTP_Generator-blue)
 ![License](https://img.shields.io/badge/License-Free-green)
@@ -9,7 +13,7 @@
 
 A secure, multilingual **TOTP (Time-based One-Time Password)** code generator for two-factor authentication (2FA) with a user-friendly web interface.
 
----
+</div>
 
 ## 🌟 Features
 
@@ -43,7 +47,8 @@ A secure, multilingual **TOTP (Time-based One-Time Password)** code generator fo
 - **Secure TOTP Algorithm**: Industry-standard **HMAC-SHA1**
 - **Input Validation**: Strict Base32 validation
 
----
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=munna-soft/authenticator@github)](https://gitads.dev/v1/ad-track?source=munna-soft/authenticator@github)
 
 ## 🚀 How to Use
 
@@ -126,3 +131,5 @@ Contributions are welcome! Please ensure:
 > **Note:** This is a client-side web application. Your secret keys are stored locally in your browser and never transmitted to external servers.
 
 <!-- GitAds-Verify: OUYIZPMHRYZ6P3KV4SV9ID4Y3YDRWR5R -->
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=munna-soft/authenticator@github)](https://gitads.dev/v1/ad-track?source=munna-soft/authenticator@github)
