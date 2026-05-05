@@ -145,6 +145,28 @@ h2 i, h3 i {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
+.btn-paste {
+    padding: 15px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-paste:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(52, 152, 219, 0.3);
+}
+
 .btn-clear {
     padding: 15px 25px;
     background-color: #e74c3c;
@@ -434,7 +456,7 @@ footer i {
         flex-direction: column;
     }
     
-    .btn-clear {
+    .btn-paste, .btn-clear {
         width: 100%;
         justify-content: center;
     }

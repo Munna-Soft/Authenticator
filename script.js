@@ -16,6 +16,7 @@ class TOTPGenerator {
         // DOM Elements References
         this.secretKeyInput = document.getElementById('secretKey');
         this.clearKeyBtn = document.getElementById('clearKey');
+        this.pasteKeyBtn = document.getElementById('pasteKey');
         this.generateCodeBtn = document.getElementById('generateCode');
         this.copyCodeBtn = document.getElementById('copyCode');
         this.saveCodeBtn = document.getElementById('saveCode');
@@ -59,7 +60,9 @@ class TOTPGenerator {
             'notification_key_cleared': 'Secret key cleared',
             'notification_saved': 'Key and code downloaded as file!',
             'notification_copy_error': 'Error copying code',
-            'enter_key_for_code': 'Enter secret key to see code'
+            'enter_key_for_code': 'Enter secret key to see code',
+            'notification_paste_success': 'Key pasted from clipboard!',
+            'notification_paste_error': 'Failed to paste. Check clipboard permissions.'
         };
         return englishTranslations[key] || key;
     }
@@ -67,6 +70,10 @@ class TOTPGenerator {
     setupEventListeners() {
         this.clearKeyBtn.addEventListener('click', () => {
             this.clearSecretKey();
+        });
+
+        this.pasteKeyBtn.addEventListener('click', () => {
+            this.pasteFromClipboard();
         });
 
         this.generateCodeBtn.addEventListener('click', () => {
@@ -101,6 +108,31 @@ class TOTPGenerator {
                 this.checkAndStartTimer();
             }, 10);
         });
+    }
+
+    async pasteFromClipboard() {
+        try {
+            const text = await navigator.clipboard.readText();
+            if (!text) {
+                this.showNotification(this.getTranslatedText('notification_paste_error'), 'error');
+                return;
+            }
+            // Clean and validate as Base32 (allow A-Z, 2-7)
+            let cleaned = text.trim().toUpperCase().replace(/[^A-Z2-7]/g, '');
+            if (cleaned.length === 0) {
+                this.showNotification(this.getTranslatedText('notification_paste_error'), 'error');
+                return;
+            }
+            this.secretKey = cleaned;
+            this.secretKeyInput.value = this.formatKey(cleaned);
+            this.saveSecretKey();
+            this.generateAndDisplayCode();
+            this.checkAndStartTimer();
+            this.showNotification(this.getTranslatedText('notification_paste_success'));
+        } catch (err) {
+            console.error('Clipboard paste error:', err);
+            this.showNotification(this.getTranslatedText('notification_paste_error'), 'error');
+        }
     }
 
     // Key Format Function

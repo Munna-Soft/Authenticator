@@ -63,6 +63,7 @@ class Translator {
                 'setup_key': 'আপনার সেটআপ কী দিন',
                 'secret_key_placeholder': 'আপনার সিক্রেট কী এখানে লিখুন বা পেষ্ট করুন (Base16/32 ফরম্যাট)',
                 'clear': 'ক্লিয়ার',
+                'paste_key': 'পেস্ট করুন',
                 'key_tip': 'টিপ: গুগল অথেন্টিকেটর, মাইক্রোসফট অথেন্টিকেটর এর সাথে সামঞ্জস্যপূর্ণ',
                 'current_otp': 'বর্তমান ওটিপি কোড',
                 'copy_code': 'কোড কপি করুন',
@@ -86,7 +87,9 @@ class Translator {
                 'notification_example_used': 'উদাহরণ কী ব্যবহার করা হয়েছে!',
                 'notification_saved': 'কী এবং কোড ফাইল হিসেবে ডাউনলোড হয়েছে!',
                 'notification_copy_error': 'কোড কপি করতে সমস্যা হয়েছে',
-                'notification_language_changed': 'ভাষা পরিবর্তন করা হয়েছে!'
+                'notification_language_changed': 'ভাষা পরিবর্তন করা হয়েছে!',
+                'notification_paste_success': 'ক্লিপবোর্ড থেকে কী পেস্ট করা হয়েছে!',
+                'notification_paste_error': 'পেস্ট করতে ব্যর্থ। ক্লিপবোর্ড অনুমতি চেক করুন।'
             },
             
             'US': {
@@ -95,6 +98,7 @@ class Translator {
                 'setup_key': 'Enter Your Setup Key',
                 'secret_key_placeholder': 'Enter or paste your secret key here (Base16/32 Format)',
                 'clear': 'Clear',
+                'paste_key': 'Paste',
                 'key_tip': 'Tip: Compatible with Google Authenticator, Microsoft Authenticator',
                 'current_otp': 'Current OTP Code',
                 'copy_code': 'Copy Code',
@@ -118,7 +122,9 @@ class Translator {
                 'notification_example_used': 'Example key used!',
                 'notification_saved': 'Key and code downloaded as file!',
                 'notification_copy_error': 'Error copying code',
-                'notification_language_changed': 'Language changed successfully!'
+                'notification_language_changed': 'Language changed successfully!',
+                'notification_paste_success': 'Key pasted from clipboard!',
+                'notification_paste_error': 'Failed to paste. Check clipboard permissions.'
             },
             
             'IN': {
@@ -127,6 +133,7 @@ class Translator {
                 'setup_key': 'अपनी सेटअप कुंजी दर्ज करें',
                 'secret_key_placeholder': 'अपनी सीक्रेट की यहाँ दर्ज करें या पेस्ट करें (Base16/32 प्रारूप)',
                 'clear': 'साफ करें',
+                'paste_key': 'पेस्ट करें',
                 'key_tip': 'टिप: Google Authenticator, Microsoft Authenticator के साथ संगत',
                 'current_otp': 'वर्तमान OTP कोड',
                 'copy_code': 'कोड कॉपी करें',
@@ -137,7 +144,7 @@ class Translator {
                 'step1': 'अपने खाते की सीक्रेट की (Base16/32 प्रारूप) इनपुट बॉक्स में दर्ज करें। Google, Microsoft, Facebook आदि के 2-कारक प्रमाणीकरण कुंजियाँ काम करेंगी।',
                 'step2': '"कोड जनरेट करें" बटन पर क्लिक करें या स्वचालित रूप से कोड जनरेट होते देखें।',
                 'step3': '6-अंकीय कोड 30 सेकंड के लिए वैध रहेगा। उपयोग करने के लिए "कोड कॉपी करें" बटन पर क्लिक करें।',
-                'step4': 'अपनी कुंजी और कोड को टेक्स्ट फ़ाइल के रूप में डाउनलोड करने के लिए "कुंजी+कोड सहेजें" बटन पर क্লिक करें।',
+                'step4': 'अपनी कुंजी और कोड को टेक्स्ट फ़ाइल के रूप में डाउनलोड करने के लिए "कुंजी+कोड सहेजें" बटन पर क्लिक करें।',
                 'example_keys': 'उदाहरण कुंजियाँ (परीक्षण के लिए)',
                 'use_key': 'उपयोग करें',
                 'security_notice': 'यह एक सुरक्षित TOTP कोड जनरेटर है। आपकी सीक्रेट की ब्राउज़र मेमोरी में संग्रहीत है लेकिन सर्वर पर नहीं भेजी जाती है।',
@@ -150,7 +157,9 @@ class Translator {
                 'notification_example_used': 'उदाहरण कुंजी का उपयोग किया गया!',
                 'notification_saved': 'कुंजी और कोड फ़ाइल के रूप में डाउनलोड किया गया!',
                 'notification_copy_error': 'कोड कॉपी करने में त्रुटि',
-                'notification_language_changed': 'भाषा सफलतापूर्वक बदली गई!'
+                'notification_language_changed': 'भाषा सफलतापूर्वक बदली गई!',
+                'notification_paste_success': 'क्लिपबोर्ड से कुंजी पेस्ट की गई!',
+                'notification_paste_error': 'पेस्ट करने में विफल। क्लिपबोर्ड अनुमतियाँ जांचें।'
             },
             
             'SA': {
@@ -159,6 +168,7 @@ class Translator {
                 'setup_key': 'أدخل مفتاح الإعداد الخاص بك',
                 'secret_key_placeholder': 'أدخل أو الصق مفتاحك السري هنا (تنسيق Base16/32)',
                 'clear': 'مسح',
+                'paste_key': 'لصق',
                 'key_tip': 'ملاحظة: متوافق مع Google Authenticator، Microsoft Authenticator',
                 'current_otp': 'رمز OTP الحالي',
                 'copy_code': 'نسخ الرمز',
@@ -182,7 +192,9 @@ class Translator {
                 'notification_example_used': 'تم استخدام المفتاح المثال!',
                 'notification_saved': 'تم تنزيل المفتاح والرمز كملف!',
                 'notification_copy_error': 'خطأ في نسخ الرمز',
-                'notification_language_changed': 'تم تغيير اللغة بنجاح!'
+                'notification_language_changed': 'تم تغيير اللغة بنجاح!',
+                'notification_paste_success': 'تم لصق المفتاح من الحافظة!',
+                'notification_paste_error': 'فشل اللصق. تحقق من أذونات الحافظة.'
             },
             
             'FR': {
@@ -191,6 +203,7 @@ class Translator {
                 'setup_key': 'Entrez Votre Clé de Configuration',
                 'secret_key_placeholder': 'Entrez ou collez votre clé secrète ici (Format Base16/32)',
                 'clear': 'Effacer',
+                'paste_key': 'Coller',
                 'key_tip': 'Astuce: Compatible avec Google Authenticator، Microsoft Authenticator',
                 'current_otp': 'Code OTP Actuel',
                 'copy_code': 'Copier le Code',
@@ -214,7 +227,9 @@ class Translator {
                 'notification_example_used': 'Clé d\'exemple utilisée!',
                 'notification_saved': 'Clé et code téléchargés sous forme de fichier!',
                 'notification_copy_error': 'Erreur lors de la copie du code',
-                'notification_language_changed': 'Langue changée avec succès!'
+                'notification_language_changed': 'Langue changée avec succès!',
+                'notification_paste_success': 'Clé collée depuis le presse-papiers!',
+                'notification_paste_error': 'Échec du collage. Vérifiez les autorisations du presse-papiers.'
             },
             
             'DE': {
@@ -223,6 +238,7 @@ class Translator {
                 'setup_key': 'Geben Sie Ihren Setup-Schlüssel ein',
                 'secret_key_placeholder': 'Geben Sie hier Ihren geheimen Schlüssel ein oder fügen Sie ihn ein (Base16/32 Format)',
                 'clear': 'Löschen',
+                'paste_key': 'Einfügen',
                 'key_tip': 'Tipp: Kompatibel mit Google Authenticator، Microsoft Authenticator',
                 'current_otp': 'Aktueller OTP-Code',
                 'copy_code': 'Code kopieren',
@@ -246,7 +262,9 @@ class Translator {
                 'notification_example_used': 'Beispielschlüssel verwendet!',
                 'notification_saved': 'Schlüssel und Code als Datei heruntergeladen!',
                 'notification_copy_error': 'Fehler beim Kopieren des Codes',
-                'notification_language_changed': 'Sprache erfolgreich geändert!'
+                'notification_language_changed': 'Sprache erfolgreich geändert!',
+                'notification_paste_success': 'Schlüssel aus der Zwischenablage eingefügt!',
+                'notification_paste_error': 'Einfügen fehlgeschlagen. Überprüfen Sie die Zwischenablage-Berechtigungen.'
             },
             
             'ES': {
@@ -255,6 +273,7 @@ class Translator {
                 'setup_key': 'Ingrese Su Clave de Configuración',
                 'secret_key_placeholder': 'Ingrese o pegue su clave secreta aquí (Formato Base16/32)',
                 'clear': 'Limpiar',
+                'paste_key': 'Pegar',
                 'key_tip': 'Consejo: Compatible con Google Authenticator، Microsoft Authenticator',
                 'current_otp': 'Código OTP Actual',
                 'copy_code': 'Copiar Código',
@@ -278,7 +297,9 @@ class Translator {
                 'notification_example_used': '¡Clave de ejemplo utilizada!',
                 'notification_saved': '¡Clave y código descargados como archivo!',
                 'notification_copy_error': 'Error al copiar el código',
-                'notification_language_changed': '¡Idioma cambiado exitosamente!'
+                'notification_language_changed': '¡Idioma cambiado exitosamente!',
+                'notification_paste_success': '¡Clave pegada desde el portapapeles!',
+                'notification_paste_error': 'Error al pegar. Verifique los permisos del portapapeles.'
             },
             
             'PT': {
@@ -287,6 +308,7 @@ class Translator {
                 'setup_key': 'Digite Sua Chave de Configuração',
                 'secret_key_placeholder': 'Digite ou cole sua chave secreta aqui (Formato Base16/32)',
                 'clear': 'Limpar',
+                'paste_key': 'Colar',
                 'key_tip': 'Dica: Compatível com Google Authenticator، Microsoft Authenticator',
                 'current_otp': 'Código OTP Atual',
                 'copy_code': 'Copiar Código',
@@ -310,7 +332,9 @@ class Translator {
                 'notification_example_used': 'Chave de exemplo usada!',
                 'notification_saved': 'Chave e código baixados como arquivo!',
                 'notification_copy_error': 'Erro ao copiar o código',
-                'notification_language_changed': 'Idioma alterado com sucesso!'
+                'notification_language_changed': 'Idioma alterado com sucesso!',
+                'notification_paste_success': 'Chave colada da área de transferência!',
+                'notification_paste_error': 'Falha ao colar. Verifique as permissões da área de transferência.'
             },
             
             'CN': {
@@ -319,6 +343,7 @@ class Translator {
                 'setup_key': '输入您的设置密钥',
                 'secret_key_placeholder': '在此输入或粘贴您的密钥（Base16/32格式）',
                 'clear': '清除',
+                'paste_key': '粘贴',
                 'key_tip': '提示：兼容Google验证器，Microsoft验证器',
                 'current_otp': '当前OTP代码',
                 'copy_code': '复制代码',
@@ -342,7 +367,9 @@ class Translator {
                 'notification_example_used': '已使用示例密钥！',
                 'notification_saved': '密钥和代码已下载为文件！',
                 'notification_copy_error': '复制代码时出错',
-                'notification_language_changed': '语言更改成功！'
+                'notification_language_changed': '语言更改成功！',
+                'notification_paste_success': '已从剪贴板粘贴密钥！',
+                'notification_paste_error': '粘贴失败。请检查剪贴板权限。'
             },
             
             'JP': {
@@ -351,6 +378,7 @@ class Translator {
                 'setup_key': 'セットアップキーを入力',
                 'secret_key_placeholder': 'ここにシークレットキーを入力または貼り付け（Base16/32形式）',
                 'clear': 'クリア',
+                'paste_key': '貼り付け',
                 'key_tip': 'ヒント：Google認証システム、Microsoft認証システムと互換性あり',
                 'current_otp': '現在のOTPコード',
                 'copy_code': 'コードをコピー',
@@ -374,7 +402,9 @@ class Translator {
                 'notification_example_used': 'サンプルキーを使用しました！',
                 'notification_saved': 'キーとコードをファイルとしてダウンロードしました！',
                 'notification_copy_error': 'コードのコピー中にエラーが発生しました',
-                'notification_language_changed': '言語を正常に変更しました！'
+                'notification_language_changed': '言語を正常に変更しました！',
+                'notification_paste_success': 'クリップボードからキーを貼り付けました！',
+                'notification_paste_error': '貼り付けに失敗しました。クリップボードの権限を確認してください。'
             },
             
             'KR': {
@@ -383,6 +413,7 @@ class Translator {
                 'setup_key': '설정 키 입력',
                 'secret_key_placeholder': '여기에 비밀 키를 입력하거나 붙여넣기 (Base16/32 형식)',
                 'clear': '지우기',
+                'paste_key': '붙여넣기',
                 'key_tip': '팁: Google Authenticator، Microsoft Authenticator와 호환',
                 'current_otp': '현재 OTP 코드',
                 'copy_code': '코드 복사',
@@ -406,7 +437,9 @@ class Translator {
                 'notification_example_used': '예제 키가 사용되었습니다!',
                 'notification_saved': '키와 코드가 파일로 다운로드되었습니다!',
                 'notification_copy_error': '코드 복사 중 오류 발생',
-                'notification_language_changed': '언어가 성공적으로 변경되었습니다!'
+                'notification_language_changed': '언어가 성공적으로 변경되었습니다!',
+                'notification_paste_success': '클립보드에서 키를 붙여넣었습니다!',
+                'notification_paste_error': '붙여넣기 실패. 클립보드 권한을 확인하세요.'
             },
             
             'RU': {
@@ -415,6 +448,7 @@ class Translator {
                 'setup_key': 'Введите ваш ключ настройки',
                 'secret_key_placeholder': 'Введите или вставьте ваш секретный ключ здесь (формат Base16/32)',
                 'clear': 'Очистить',
+                'paste_key': 'Вставить',
                 'key_tip': 'Совет: Совместим с Google Authenticator، Microsoft Authenticator',
                 'current_otp': 'Текущий код OTP',
                 'copy_code': 'Копировать код',
@@ -424,8 +458,8 @@ class Translator {
                 'how_to_use': 'Как использовать?',
                 'step1': 'Введите ваш секретный ключ аккаунта (формат Base16/32) в поле ввода. Работает с ключами двухфакторной аутентификации Google، Microsoft، Facebook и т.д.',
                 'step2': 'Нажмите кнопку "Сгенерировать код" или наблюдайте، как код генерируется автоматически.',
-                'step3': '6-значный код будет действителен в течение 30 секунд. Нажмите "Копировать код"， чтобы использовать его.',
-                'step4': 'Нажмите "Сохранить ключ + код"， чтобы загрузить ваш ключ и код в виде текстового файла.',
+                'step3': '6-значный код будет действителен в течение 30 секунд. Нажмите "Копировать код"، чтобы использовать его.',
+                'step4': 'Нажмите "Сохранить ключ + код"، чтобы загрузить ваш ключ и код в виде текстового файла.',
                 'example_keys': 'Примеры ключей (для тестирования)',
                 'use_key': 'Использовать',
                 'security_notice': 'Это безопасный генератор кодов TOTP. Ваш секретный ключ хранится в памяти браузера، но не отправляется на сервер.',
@@ -438,7 +472,9 @@ class Translator {
                 'notification_example_used': 'Пример ключа использован!',
                 'notification_saved': 'Ключ и код загружены как файл!',
                 'notification_copy_error': 'Ошибка при копировании кода',
-                'notification_language_changed': 'Язык успешно изменен!'
+                'notification_language_changed': 'Язык успешно изменен!',
+                'notification_paste_success': 'Ключ вставлен из буфера обмена!',
+                'notification_paste_error': 'Ошибка вставки. Проверьте разрешения буфера обмена.'
             }
         };
         
